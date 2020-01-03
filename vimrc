@@ -28,8 +28,8 @@ set encoding=utf8
 
 " Better tabs (but still tabs, not spaces)
 set smarttab
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set softtabstop=2
 
 " Highlight last 80 characters
 let &colorcolumn=join(range(81,999),",")
