@@ -27,7 +27,7 @@ endtry
 set encoding=utf8
 
 " Better tabs (but still tabs, not spaces)
-set smarttab
+set autoindent
 set shiftwidth=2
 set softtabstop=2
 
