@@ -26,8 +26,7 @@ endtry
 
 set encoding=utf8
 
-" Better tabs
-set expandtab
+" Better tabs (but still tabs, not spaces)
 set smarttab
 set shiftwidth=4
 set tabstop=4
