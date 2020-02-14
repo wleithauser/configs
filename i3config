@@ -25,10 +25,10 @@ bindsym $mod+Return exec terminal
 bindsym $mod+x kill
 
 # start program launcher
-bindsym $mod+Space exec --no-startup-id dmenu_recency
+bindsym $mod+space exec --no-startup-id dmenu_recency
 
 # launch categorized menu
-bindsym $mod+Shift+Space exec --no-startup-id morc_menu
+bindsym $mod+Shift+space exec --no-startup-id morc_menu
 
 ################################################################################################
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
