@@ -37,8 +37,8 @@ set smartindent
 autocmd Filetype python setlocal expandtab
 autocmd Filetype haskell setlocal expandtab
 
-" Display whitespace
-set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
+" Display whitespace (except for non-trailing whitespace)
+set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<
 set list
 
 " Automatically install plug
