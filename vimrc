@@ -36,3 +36,15 @@ set autoindent
 set smartindent
 autocmd Filetype python setlocal expandtab
 autocmd Filetype haskell setlocal expandtab
+
+" Automatically install plug
+if empty(glob('~/.vim/autoload/plug.vim'))
+	silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+	\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+" Plug plugins
+call plug#begin()
+Plug 'vimwiki/vimwiki'
+call plug#end()
