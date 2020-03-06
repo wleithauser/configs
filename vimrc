@@ -37,6 +37,10 @@ set smartindent
 autocmd Filetype python setlocal expandtab
 autocmd Filetype haskell setlocal expandtab
 
+" Display whitespace
+set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
+set list
+
 " Automatically install plug
 if empty(glob('~/.vim/autoload/plug.vim'))
 	silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
