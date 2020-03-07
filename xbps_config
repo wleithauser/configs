@@ -1,0 +1,2 @@
+repository=https://alpha.us.repo.voidlinux.org/current/musl
+ignorepkg=sudo

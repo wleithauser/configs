@@ -33,7 +33,7 @@ floating_modifier $mod
 bindsym $mod+Return exec st
 
 # Poweroff
-bindsym $mod+shift+q exec sudo poweroff
+bindsym $mod+shift+q exec doas poweroff
 
 # kill focused window
 bindsym $mod+x kill
@@ -175,3 +175,6 @@ bar {
 bindsym $mod+l exec --no-startup-id i3lock -c 000050
 
 exec --no-startup-id nm-applet
+
+bindsym $mod+k exec xrandr --output eDP1 --off --output HDMI1 --auto
+bindsym $mod+b exec xrandr --output eDP1 --auto --output HDMI1 --off
