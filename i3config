@@ -33,10 +33,11 @@ floating_modifier $mod
 bindsym $mod+Return exec st
 
 # Poweroff
-bindsym $mod+shift+q exec doas poweroff
+bindsym $mod+Shift+q exec doas poweroff
 
 # kill focused window
 bindsym $mod+x kill
+bindsym $mod+Shift+x --release exec --no-startup-id xkill
 
 # start rofi (a program launcher)
 bindsym $mod+space exec rofi -show run
