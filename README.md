@@ -1,7 +1,15 @@
-# configs
+# Dotfiles
 
-Currently I have uploaded my vimrc and i3 configuration.
+These are the dotfiles I use on my arch linux installation.
+
+## Usage
+
+Here is an example using my bash profile:
+
 ```
-curl https://raw.githubusercontent.com/wleithauser/configs/master/vimrc -o ~/.vimrc
-curl https://raw.githubusercontent.com/wleithauser/configs/master/i3config -o ~/.i3/config
+git clone https://github.com/wleithauser/dotfiles.git
+cd dotfiles
+ln -s bash_profile ~/.bash_profile
 ```
+
+Simply symlink each file to its intended location.
