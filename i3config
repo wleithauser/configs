@@ -12,14 +12,18 @@ font pango:monospace 8
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
-# NetworkManager is the most popular way to manage wireless networks on Linux,
-# and nm-applet is a desktop environment-independent system tray GUI for it.
+# Start network manager tray applet
 exec --no-startup-id nm-applet
 
-# Use pactl to adjust volume in PulseAudio.
-set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q set Master 3dB+, exec killall -USR1 i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q set Master 3dB-, exec killall -USR1 i3status
+# Start bluetooth tray applet
+exec --no-startup-id blueman-applet
+
+# Start mullvad vpn tray applet
+exec --no-startup-id mullvad-vpn
+
+# Adjust volume
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q set Master 5%+, exec killall -USR1 i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q set Master 5%-, exec killall -USR1 i3status
 bindsym XF86AudioMute exec --no-startup-id amixer -q set Master toggle, exec killall -USR1 i3status
 
 # Adjust brightness
@@ -30,10 +34,10 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec st
+bindsym $mod+Return exec alacritty
 
 # Poweroff
-bindsym $mod+Shift+q exec doas poweroff
+bindsym $mod+Shift+q exec sudo poweroff
 
 # kill focused window
 bindsym $mod+x kill
@@ -170,6 +174,7 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
+        font pango:DejaVu Sans Mono 10
         status_command i3status
 }
 
