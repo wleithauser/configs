@@ -37,7 +37,7 @@ floating_modifier $mod
 bindsym $mod+Return exec alacritty
 
 # Poweroff
-bindsym $mod+Shift+q exec sudo poweroff
+bindsym $mod+Shift+q exec poweroff
 
 # kill focused window
 bindsym $mod+x kill
