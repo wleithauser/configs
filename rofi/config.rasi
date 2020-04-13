@@ -1,0 +1,13 @@
+//----------------------
+// Configuration
+//----------------------
+
+configuration {
+	modi: 			"run,calc,keys";
+	width: 			750;
+	lines: 			10;
+	show-match: 		false;
+	hide-scrollbar: 	true;
+	separator-style:	"solid";
+	theme:				"nord";
+}
