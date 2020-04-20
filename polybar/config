@@ -56,7 +56,7 @@ interval = 0.5
 label = CPU %percentage%%
 
 [module/bspwm]
-type = internal/bspwm
+type = internal/bspwm 
 label-focused = %name%
 label-focused-background = #3B4252
 label-focused-foreground = ${colors.primary}
