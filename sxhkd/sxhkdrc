@@ -27,8 +27,8 @@ super + Escape
 	pkill -USR1 -x sxhkd
 
 # poweroff or reboot
-super + shift + {q, r}
-	{poweroff, reboot}
+#super + shift + {q, r}
+#	{poweroff, reboot}
 
 #
 # bspwm hotkeys
@@ -153,3 +153,9 @@ XF86MonBrightnessDown
 # lock screen
 super + q
 	betterlockscreen --lock
+
+# auto click
+super + a
+	xdotool click --repeat 50000 --delay 1 1
+super + shift + a
+	killall xdotool
