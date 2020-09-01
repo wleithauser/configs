@@ -1,0 +1,1 @@
+/home/will/Git/nord-qutebrowser/nord-qutebrowser.py

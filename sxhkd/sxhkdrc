@@ -12,7 +12,7 @@ super + @space
 
 # calculator
 super + v
-	rofi -show calc -no-show-match -no-sort -no-history
+	rofi -show calc -no-show-match -no-sort -no-history | xclip -selection c
 
 # password manager
 super + shift + v
@@ -153,6 +153,14 @@ XF86MonBrightnessDown
 # lock screen
 super + q
 	betterlockscreen --lock
+
+# tab functionality using tabbed
+super + w; {h,j,k,l}
+	tabc.sh $(bspc query -N -n {west,south,north,east}) add $(bspc query -N -n focused)
+super + w; r
+	tabbed=$(bspc query -N -n focused); \
+	child=$(tabc.sh $tabbed list | head -n1); \
+	tabc.sh $tabbed remove $child
 
 # auto click
 super + a
