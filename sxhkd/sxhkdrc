@@ -167,3 +167,7 @@ super + a
 	xdotool click --repeat 50000 --delay 1 1
 super + shift + a
 	killall xdotool
+
+# screenshot
+super + shift + @w
+	scrot -s

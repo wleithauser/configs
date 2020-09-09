@@ -3,15 +3,15 @@
 sxhkd &
 
 # kill existing programs
-killall nm-applet blueman-applet mullvad-vpn polybar spotifyd
+killall nm-applet blueman-applet mullvad-vpn polybar discord udiskie
 
 # launch programs
 nm-applet &
 blueman-applet &
 mullvad-vpn &
 polybar main &
-spotifyd &
 discord &
+udiskie &
 
 bspc monitor -d 1 2 3 4 5 6 7 8 9
 

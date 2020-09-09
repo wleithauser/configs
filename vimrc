@@ -56,3 +56,9 @@ endif
 call plug#begin()
 Plug 'vimwiki/vimwiki'
 call plug#end()
+
+call plug#begin(expand('~/vim/plugged'))
+Plug 'arcticicestudio/nord-vim'
+call plug#end()
+
+colorscheme nord
