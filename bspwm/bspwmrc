@@ -10,7 +10,6 @@ nm-applet &
 blueman-applet &
 mullvad-vpn &
 polybar main &
-discord &
 udiskie &
 
 bspc monitor -d 1 2 3 4 5 6 7 8 9
@@ -30,3 +29,6 @@ bspc config presel_feedback_color	"#81a1c1"
 
 # wallpaper
 feh --bg-fill $HOME/.config/wallpaper.png
+
+# rules
+bspc rule -a Emacs state=tiled

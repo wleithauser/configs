@@ -20,7 +20,7 @@ super + shift + v
 
 # browser
 super + shift + Return
-	qutebrowser
+	firefox
 
 # make sxhkd reload its configuration files:
 super + Escape
