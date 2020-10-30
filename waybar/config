@@ -101,6 +101,7 @@
         "format-disconnected": "⚠  Disc.",
         "tooltip-format-wifi": "{essid} - {ipaddr}",
         "tooltip-format-ethernet": "{ipaddr}/{cidr}",
+        "on-click": "nm-connection-editor"
     },
 
     "sway/mode": {
@@ -117,16 +118,6 @@
         "all-outputs": false,
         "disable-scroll": true,
         "format": "{name}",
-        "format-icons": {
-            "1:www": "龜", // Icon: firefox-browser
-            "2:mail": "", // Icon: mail
-            "3:editor": "", // Icon: code
-            "4:terminals": "", // Icon: terminal
-            "5:portal": "", // Icon: terminal
-            "urgent": "",
-            "focused": "",
-            "default": ""
-        }
     },
 
     "pulseaudio": {
@@ -154,7 +145,8 @@
     "disk": {
         "interval": 30,
         "path": "/",
-        "format": " {percentage_used}%"
+        "format": " {percentage_used}%",
+        "on-click": "baobab"
     },
 
     "custom/pacman": {
