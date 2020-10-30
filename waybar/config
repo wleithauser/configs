@@ -1,0 +1,168 @@
+// =============================================================================
+//
+// Waybar configuration
+//
+// Configuration reference: https://github.com/Alexays/Waybar/wiki/Configuration
+//
+// =============================================================================
+
+{
+    // -------------------------------------------------------------------------
+    // Global configuration
+    // -------------------------------------------------------------------------
+
+    "layer": "top",
+
+    "position": "top",
+
+    // If height property would be not present, it'd be calculated dynamically
+    "height": 24,
+
+    "modules-left": [
+        "sway/workspaces",
+        "sway/mode"
+    ],
+    "modules-center": [
+        "sway/window"
+    ],
+    "modules-right": [
+        "network",
+        "memory",
+        "cpu",
+        "disk",
+        "pulseaudio",
+        "battery",
+        "custom/pacman",
+        "tray",
+        "clock#date",
+        "clock#time",
+    ],
+
+
+    // -------------------------------------------------------------------------
+    // Modules
+    // -------------------------------------------------------------------------
+
+    "battery": {
+        "interval": 10,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        // Connected to AC
+        "format": "  {icon}  {capacity}%", // Icon: bolt
+        // Not connected to AC
+        "format-discharging": "{icon}  {capacity}%",
+        "format-icons": [
+            "", // Icon: battery-full
+            "", // Icon: battery-three-quarters
+            "", // Icon: battery-half
+            "", // Icon: battery-quarter
+            ""  // Icon: battery-empty
+        ],
+        "tooltip": true
+    },
+
+    "clock#time": {
+        "interval": 1,
+        "format": "{:%H:%M:%S\t}",
+        "tooltip": false,
+        "max-length": 10000
+    },
+
+    "clock#date": {
+      "interval": 10,
+      "format": "  {:%e %b %Y}", // Icon: calendar-alt
+      "tooltip-format": "{:%e %B %Y}"
+    },
+
+    "cpu": {
+        "interval": 2,
+        "format": "  {usage}%", // Icon: microchip
+        "states": {
+          "warning": 70,
+          "critical": 90
+        }
+    },
+
+    "memory": {
+        "interval": 5,
+        "format": "  {}%", // Icon: memory
+        "states": {
+            "warning": 70,
+            "critical": 90
+        }
+    },
+
+    "network": {
+        "interval": 5,
+        "format-wifi": "  ({signalStrength}%)", // Icon: wifi
+        "format-ethernet": "  {ifname} ", // Icon: ethernet
+        "format-disconnected": "⚠  Disc.",
+        "tooltip-format-wifi": "{essid} - {ipaddr}",
+        "tooltip-format-ethernet": "{ipaddr}/{cidr}",
+    },
+
+    "sway/mode": {
+        "format": "<span style=\"italic\">  {}</span>", // Icon: expand-arrows-alt
+        "tooltip": false
+    },
+
+    "sway/window": {
+        "format": "{}",
+        "max-length": 42
+    },
+
+    "sway/workspaces": {
+        "all-outputs": false,
+        "disable-scroll": true,
+        "format": "{name}",
+        "format-icons": {
+            "1:www": "龜", // Icon: firefox-browser
+            "2:mail": "", // Icon: mail
+            "3:editor": "", // Icon: code
+            "4:terminals": "", // Icon: terminal
+            "5:portal": "", // Icon: terminal
+            "urgent": "",
+            "focused": "",
+            "default": ""
+        }
+    },
+
+    "pulseaudio": {
+        //"scroll-step": 1,
+        "format": "{icon}  {volume}%",
+        "format-bluetooth": "{icon}  {volume}%",
+        "format-muted": "",
+        "format-icons": {
+            "headphones": "",
+            "handsfree": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+    },
+
+    "disk": {
+        "interval": 30,
+        "path": "/",
+        "format": " {percentage_used}%"
+    },
+
+    "custom/pacman": {
+        "format": " {}",
+        "interval": 300,
+        "exec": "$HOME/.config/waybar/pacman.sh",
+        "exec-if": "exit 0",
+        "signal": 8,
+        "return-type": "json"
+    }
+}
