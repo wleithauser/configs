@@ -101,7 +101,7 @@
         "format-disconnected": "⚠  Disc.",
         "tooltip-format-wifi": "{essid} - {ipaddr}",
         "tooltip-format-ethernet": "{ipaddr}/{cidr}",
-        "on-click": "wofi-wifi-menu"
+        "on-click": "nm-connection-editor"
     },
 
     "sway/mode": {
