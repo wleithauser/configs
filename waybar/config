@@ -50,7 +50,7 @@
             "critical": 15
         },
         // Connected to AC
-        "format": "  {icon}  {capacity}%", // Icon: bolt
+        "format": "  {icon}  {capacity:2}%", // Icon: bolt
         // Not connected to AC
         "format-discharging": "{icon}  {capacity}%",
         "format-icons": [
@@ -65,20 +65,20 @@
 
     "clock#time": {
         "interval": 1,
-        "format": "{:%H:%M:%S\t}",
+        "format": "{:%H:%M:%S}",
         "tooltip": false,
         "max-length": 10000
     },
 
     "clock#date": {
       "interval": 10,
-      "format": "  {:%e %b %Y}", // Icon: calendar-alt
+      "format": "{:%e %b %Y}", // Icon: calendar-alt
       "tooltip-format": "{:%e %B %Y}"
     },
 
     "cpu": {
         "interval": 2,
-        "format": "  {usage}%", // Icon: microchip
+        "format": "  {usage:2}%", // Icon: microchip
         "states": {
           "warning": 70,
           "critical": 90
@@ -87,7 +87,7 @@
 
     "memory": {
         "interval": 5,
-        "format": "  {}%", // Icon: memory
+        "format": "  {:2}%", // Icon: memory
         "states": {
             "warning": 70,
             "critical": 90
@@ -111,7 +111,7 @@
 
     "sway/window": {
         "format": "{}",
-        "max-length": 42
+        "max-length": 45
     },
 
     "sway/workspaces": {
@@ -122,9 +122,9 @@
 
     "pulseaudio": {
         //"scroll-step": 1,
-        "format": "{icon}  {volume}%",
+        "format": "{icon:2}{volume:2}%",
         "format-bluetooth": "{icon}  {volume}%",
-        "format-muted": "",
+        "format-muted": " MUT",
         "format-icons": {
             "headphones": "",
             "handsfree": "",

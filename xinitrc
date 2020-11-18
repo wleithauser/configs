@@ -1,2 +1,2 @@
 setxkbmap us -variant colemak
-exec openbox-session
+exec i3

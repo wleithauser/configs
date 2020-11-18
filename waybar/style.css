@@ -50,8 +50,9 @@
 #waybar {
     background: #323232;
     color: white;
-    font-family: Cantarell, Noto Sans, sans-serif;
-    font-size: 13px;
+    /*font-family: Cantarell, Noto Sans, sans-serif;*/
+    font-family: monospace;
+    font-size: 14px;
 }
 
 /* Each module */
@@ -99,7 +100,7 @@
 }
 
 #clock {
-    font-weight: bold;
+    /*font-weight: bold;*/
 }
 
 #cpu {
@@ -170,7 +171,7 @@
 }
 
 #window {
-    font-weight: bold;
+    /*font-weight: bold;*/
 }
 
 #workspaces button {
