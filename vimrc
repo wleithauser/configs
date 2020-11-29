@@ -31,8 +31,9 @@ set tabstop=4
 set smarttab
 set autoindent
 set smartindent
-autocmd Filetype python setlocal expandtab
-autocmd Filetype haskell setlocal expandtab
+set expandtab
+"autocmd Filetype python setlocal expandtab
+"autocmd Filetype haskell setlocal expandtab
 
 " Display whitespace (except for non-trailing whitespace)
 set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<

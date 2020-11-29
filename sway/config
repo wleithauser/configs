@@ -23,8 +23,8 @@ set $term alacritty
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 #set $menu dmenu_path | dmenu | xargs swaymsg exec --
-set $menu wofi --show run
-#set $menu rofi -show run
+#set $menu wofi --show run
+set $menu rofi -show run
 set $browser qutebrowser
 
 ### Output configuration
@@ -32,7 +32,7 @@ set $browser qutebrowser
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 #output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 output * bg /usr/share/backgrounds/archlinux/landscape.jpg fill
-
+#output * bg $HOME/.config/wallpaper.png fill
 #
 # Example configuration:
 #
@@ -75,7 +75,7 @@ input * {
 # Gaps and borders
 #default_border pixel 2
 #default_floating_border normal
-#gaps inner 6
+#gaps inner 4
 #gaps outer -2
 
 # Setting GTK themes
@@ -111,6 +111,15 @@ font monospace 12px
     # Change normal to inverse to use left mouse button for resizing and right
     # mouse button for dragging.
     floating_modifier $mod normal
+
+    # Close a window with the middle mouse button
+    bindsym button2 kill
+    bindsym --whole-window $mod+button2 kill
+    bindsym button3 floating toggle
+    bindsym button8 move left
+    bindsym button9 move right
+    bindsym --whole-window $mod+button8 move left
+    bindsym --whole-window $mod+button9 move right
 
     # Reload the configuration file
     bindsym $mod+Alt+r reload
@@ -202,8 +211,9 @@ bindsym $mod+Shift+Down seat * cursor move 0 11
     # Swap focus between the tiling area and the floating area
     #bindsym $mod+space focus mode_toggle
 
-    # Move focus to the parent container
+    # Move focus to the parent/child container
     bindsym $mod+p focus parent
+    bindsym $mod+c focus child
 #
 # Scratchpad:
 #
@@ -258,38 +268,29 @@ bindsym $mod+Ctrl+Shift+w exec killall -s 2 wf-recorder
 # Auto clicker
 bindsym $mod+a exec xdotool click --repeat 500000 --delay 1 1
 bindsym $mod+Shift+a exec killall xdotool
-bindsym Print exec xdotool click 1
-bindsym Shift+Print exec xdotool click 1
-#bindsym Print seat * cursor press 1
-#bindsym Shift+Print seat * cursor press 1
+bindsym Print exec swaymsg seat \* cursor press button1 && swaymsg seat \* cursor release button1
+bindsym Shift+Print exec swaymsg seat \* cursor press button1 && swaymsg seat \* cursor release button1
 
 # Calculator
-bindsym $mod+c exec rofi -show calc
+bindsym $mod+Shift+c exec rofi -show calc
 
 # Switch keyboard layout
 bindsym $mod+m input * xkb_variant "colemak"
 bindsym $mod+Shift+m input * xkb_variant ""
+
 # Colors
-#client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
-#client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
-#client.unfocused        #333333 #222222 #888888 #292d2e   #222222
-#client.urgent           #2f343a #900000 #ffffff #900000   #900000
-#client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
-#client.background       #ffffff
-
-
-#client.focused          #4c7899 #4c7899 #4c7899 #4c7899 #4c7899
-#client.focused_inactive #333333 #333333 #333333 #333333 #333333
-#client.unfocused        #333333 #333333 #333333 #333333 #333333
-#client.urgent           #2f343a #2f343a #2f343a #2f343a #2f343a
-#client.placeholder      #000000 #000000 #000000 #000000 #000000
+#client.focused          #81a1c1 #3b4252 #eceff4 #2e9ef4 #81a1c1
+#client.focused_inactive #333333 #5f676a #eceff4 #484e50 #5f676a
+#client.unfocused        #4c566a #4c566a #d8dee9 #292d2e #4c566a
+#client.urgent           #2f343a #900000 #ffffff #900000 #900000
+#client.placeholder      #000000 #0c0c0c #ffffff #000000 #0c0c0c
 #client.background       #ffffff
 
 # Autostart
 exec nm-applet --indicator &
 exec udiskie &
 exec --no-startup-id mullvad-vpn &
-
+exec --no-startup-id blueman-applet
 #
 #
 # Status Bar:
