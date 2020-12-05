@@ -1,0 +1,7 @@
+setxkbmap us -variant colemak
+if [ $# -gt 0 ]; then
+    $*
+else
+    i3
+fi
+
