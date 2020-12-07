@@ -72,7 +72,7 @@
 
     "clock#date": {
       "interval": 10,
-      "format": " {:%e %b %Y}", // Icon: calendar-alt
+      "format": " {:%Y-%m-%d}", // Icon: calendar-alt
       "tooltip-format": "{:%e %B %Y}"
     },
 
