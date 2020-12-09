@@ -12,23 +12,23 @@
 
 @keyframes blink-warning {
     70% {
-        color: white;
+        color: #d8dee9;
     }
 
     to {
-        color: white;
-        background-color: orange;
+        color: #d8dee9;
+        background-color: #d08770;
     }
 }
 
 @keyframes blink-critical {
     70% {
-      color: white;
+      color: #d8dee9;
     }
 
     to {
-        color: white;
-        background-color: red;
+        color: #d8dee9;
+        background-color: #bf616a;
     }
 }
 
@@ -48,9 +48,8 @@
 
 /* The whole bar */
 #waybar {
-    background: #323232;
-    color: white;
-    /*font-family: Cantarell, Noto Sans, sans-serif;*/
+    background: #353b49;
+    color: #d8dee9;
     font-family: monospace;
     font-size: 14px;
 }
@@ -82,11 +81,12 @@
 }
 
 #battery.warning {
-    color: orange;
+    color: #d08770;
+    background: #353b49;
 }
 
 #battery.critical {
-    color: red;
+    color: #bf616a;
 }
 
 #battery.warning.discharging {
@@ -108,11 +108,11 @@
 }
 
 #cpu.warning {
-    color: orange;
+    color: #d08770;
 }
 
 #cpu.critical {
-    color: red;
+    color: #bf616a;
 }
 
 #memory {
@@ -122,18 +122,18 @@
 }
 
 #memory.warning {
-    color: orange;
+    color: #d08770;
 }
 
 #memory.critical {
-    color: red;
+    color: #bf616a;
     animation-name: blink-critical;
     animation-duration: 2s;
 }
 
 #mode {
-    background: #64727D;
-    border-top: 2px solid white;
+    background: #5e81ac;
+    border-top: 2px solid #d8dee9;
     /* To compensate for the top border and still have vertical centering */
     padding-bottom: 2px;
 }
@@ -143,7 +143,7 @@
 }
 
 #network.disconnected {
-    color: orange;
+    color: #d08770;
 }
 
 #pulseaudio {
@@ -163,7 +163,7 @@
 }
 
 #temperature.critical {
-    color: red;
+    color: #bf616a;
 }
 
 #tray {
@@ -184,12 +184,12 @@
 }
 
 #workspaces button.focused {
-    border-color: #4c7899;
-    color: white;
-    background-color: #285577;
+    border-color: #81a1c1;
+    color: #d9dee9;
+    background-color: #4c566a;
 }
 
 #workspaces button.urgent {
-    border-color: #c9545d;
-    color: #c9545d;
+    border-color: #bf616a;
+    color: #bf616a;
 }

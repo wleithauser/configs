@@ -22,11 +22,10 @@
         "sway/workspaces",
         "sway/mode"
     ],
-//    "modules-center": [
-//        "sway/window"
-//    ],
+    "modules-center": [
+      "sway/window"
+    ],
     "modules-right": [
-//        "network",
         "memory",
         "cpu",
         "disk",
@@ -44,7 +43,7 @@
     // -------------------------------------------------------------------------
 
     "battery": {
-        "interval": 10,
+        "interval": 5,
         "states": {
             "warning": 30,
             "critical": 15
