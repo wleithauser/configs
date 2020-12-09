@@ -109,6 +109,7 @@
 
 #cpu.warning {
     color: #d08770;
+    background: #353b49;
 }
 
 #cpu.critical {
@@ -123,6 +124,7 @@
 
 #memory.warning {
     color: #d08770;
+    background: #353b49;
 }
 
 #memory.critical {

@@ -21,7 +21,7 @@ set $browser qutebrowser
 ### Output configuration
 
 # Set wallpaper
-output * bg $HOME/.config/arch.png fill
+output * bg $HOME/.config/wallpaper.png fill
 
 # Gaps and borders
 gaps inner 4
