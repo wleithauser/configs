@@ -1,0 +1,13 @@
+indicator-caps-lock
+image=~/.config/wallpaper.png
+scaling=fill
+line-color=#3b4252
+text-color=#eceff4
+inside-ver-color=#5e81ac
+line-ver-color=#5e81ac
+ring-ver-color=#5e81ac
+ring-color=#4c566a
+key-hl-color=#5e81ac
+separator-color=#5e81ac
+layout-text-color=#eceff4
+line-wrong-color=#d08770

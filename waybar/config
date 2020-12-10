@@ -110,7 +110,7 @@
 
     "sway/window": {
         "format": "{}",
-        "max-length": 45
+        "max-length": 40
     },
 
     "sway/workspaces": {

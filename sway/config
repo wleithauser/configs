@@ -193,6 +193,9 @@ bindsym $mod+Shift+c exec rofi -show calc
 bindsym $mod+m input * xkb_variant "colemak"
 bindsym $mod+Shift+m input * xkb_variant ""
 
+# Lock screen
+bindsym $mod+q exec swaylock -C ~/.config/swaylock/config
+
 # Autostart programs
 exec nm-applet --indicator &
 exec udiskie &
