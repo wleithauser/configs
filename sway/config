@@ -13,7 +13,7 @@ set $right l
 set $term alacritty
 
 # Set application launcher
-set $menu wofi -c ~/.config/wofi/config
+set $menu wofi -c ~/.config/wofi/config --show run
 
 # Set browser
 set $browser qutebrowser
@@ -199,8 +199,10 @@ bindsym $mod+q exec swaylock -C ~/.config/swaylock/config
 # Autostart programs
 exec nm-applet --indicator &
 exec udiskie &
-exec --no-startup-id mullvad-vpn &
-exec --no-startup-id blueman-applet
+exec syncthing -no-browser &
+exec mullvad-vpn &
+exec blueman-applet &
+exec startspotifyd.sh &
 
 # Resize mode
 mode "resize" {

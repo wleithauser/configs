@@ -9,9 +9,9 @@ padding-right = 1
 override-redirect = false
 wm-restack = i3
 border-size = 0
-border-color = #323232
-background = #323232
-foreground = #FFFFFF
+border-color = #353B49
+background = #353B49
+foreground = #D8DEE9
 
 [module/date]
 type = internal/date
@@ -46,11 +46,11 @@ enable-click = true
 enable-scroll = true
 
 label-mode = %mode%
-label-mode-background = #64727D
+label-mode-background = #5E81AC
 label-mode-padding = 2
 
 label-focused = %name%
-label-focused-background = #285577
+label-focused-background = #4C566A
 label-focused-padding = 2
 
 label-unfocused = %name%
@@ -61,5 +61,5 @@ label-visible = %name%
 label-visible-padding = 2
 
 label-urgent = %name%
-label-urgent-foreground = #C9545D
+label-urgent-foreground = #BF616a
 label-urgent-padding = 2

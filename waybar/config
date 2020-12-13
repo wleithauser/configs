@@ -20,7 +20,8 @@
 
     "modules-left": [
         "sway/workspaces",
-        "sway/mode"
+        "sway/mode",
+        "river/tags"
     ],
     "modules-center": [
       "sway/window"
@@ -155,5 +156,9 @@
         "exec-if": "exit 0",
         "signal": 8,
         "return-type": "json"
+    },
+
+    "river/tags": {
+        "num-tags": 9
     }
 }

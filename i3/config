@@ -27,10 +27,14 @@ font pango:monospace 13
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # Set desktop background
-exec_always feh --bg-scale /usr/share/backgrounds/archlinux/landscape.jpg
+exec_always feh --bg-scale ~/.config/wallpaper.png
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
+exec --no-startup-id picom
+
+new_window pixel 2
+gaps inner 4
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -175,5 +179,11 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
+
+client.focused          #5e81ac #5e81ac #eceff4 #434c5e   #5e81ac
+client.focused_inactive #4c566a #4c566a #d8dee9 #3b4252   #434c5e
+client.unfocused        #4c566a #4c566a #d8dee9 #3b4252   #434c5e
+client.urgent           #7c818c #bf616a #eceff4 #900000   #bf616a
+client.placeholder      #000000 #0c0c0c #eceff4 #000000   #0c0c0c
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
