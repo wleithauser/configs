@@ -1,3 +1,4 @@
+QT_STYLE_OVERRIDE=kvantum
 setxkbmap us -variant colemak
 if [ $# -gt 0 ]; then
     $*
