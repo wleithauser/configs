@@ -27,9 +27,9 @@
       "sway/window"
     ],
     "modules-right": [
-        "memory",
+//        "memory",
         "cpu",
-        "disk",
+//        "disk",
         "pulseaudio",
         "battery",
         "custom/pacman",
